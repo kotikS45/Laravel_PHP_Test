@@ -8,7 +8,7 @@
 <body>
 <h1>Register</h1>
 
-<form action="{{ url('/register') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <div>

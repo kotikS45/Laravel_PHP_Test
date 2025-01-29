@@ -8,7 +8,7 @@
 <body>
 <h1>Login</h1>
 
-<form action="{{ url('/login') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('login') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <div>
@@ -22,6 +22,8 @@
     </div>
 
     <button type="submit">Login</button>
+
 </form>
+<a href="{{ route('auth.google.redirect') }}">Login with Google</a>
 </body>
 </html>

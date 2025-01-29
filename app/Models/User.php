@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,7 +21,8 @@ class User extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
-        'image'
+        'image',
+        'google_id'
     ];
 
     /**
@@ -59,7 +59,8 @@ class User extends Authenticatable implements JWTSubject
             "email" => $this->email,
             "name" => $this->name,
             "image" => $this->image,
-            "verified" => $this->email_verified_at
+            "verified" => $this->email_verified_at,
+            'google_id' => $this->google_id
         ];
     }
 }
